@@ -596,7 +596,7 @@ body {
 .mySwiper2,
 .mySwiper3 {
     border: 1px solid hsl(var(--border));
-    background-color: hsla(var(--card));
+    background-color: #fff;
     border-radius: var(--size);
     padding: var(--size-s);
 }
