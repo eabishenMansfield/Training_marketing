@@ -224,7 +224,8 @@ body {
     outline-color: hsl(var(--primary));
     padding: var(--size);
     transition: all 0.3s ease;
-    /* background-color: hsl(var(--background)); */
+    /* background-color: hsl(var(--background));
+     */
 }
 
 .form-wrapper label {
@@ -277,9 +278,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid hsl(var(--secondary));
+    border: 1px solid #afafaf;
     border-radius: var(--size-xs);
-    background-color: hsl(var(--secondary) / 10%);
+    background-color: #fff;
     padding: var(--size-s);
     color: hsl(var(--secondary-foreground));
     transition: background-color 0.3s ease-in;
@@ -360,12 +361,15 @@ body {
 
 
 
-.common_feature {
-    padding-inline: var(--size);
+.common_feature p {
+    font-size: 18px;
+    /* padding-inline: var(--size); */
 }
 
 .shade1 {
-    background-color: hsl(var(--accent));
+    /* background: url('../assets/paperBG.jpg') no-repeat center; */
+    background: rgba(156, 173, 201, 0.253);
+    background: -moz-linear-gradient(180deg, rgba(156, 173, 201, 0.205) 8%, rgba(141, 160, 193, 0.185) 96%);
 }
 
 .darkershade1 {
@@ -393,15 +397,24 @@ body {
 
 .posittion-relative {
     position: relative;
-    height: 450px;
+    min-height: 460px;
     z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .feature_image {
-    background-color: #eee;
-    position: absolute;
+    /* background-color: #eee; */
+    padding-inline: 10px;
+    /* position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: -1; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-block: auto;
 }
 
 .feature_image img {
@@ -418,8 +431,8 @@ body {
 }
 
 .logocontainer {
-    /* width: 100px; */
-    height: auto;
+    width: 100px;
+    height: 100px;
     padding: var(--size);
     border-radius: var(--size);
     background-color: #fff;
@@ -444,8 +457,7 @@ body {
 }
 
 .benefits-tag {
-    background-color: hsl(var(--secondary) / 10%);
-    border: 1px solid hsl(var(--secondary) / 50%);
+
     padding: var(--size-s);
     border-radius: var(--size);
     display: flex;
@@ -494,6 +506,98 @@ body {
 .social_icons a {
     color: hsl(var(--primary-foreground));
     font-size: 20px;
+}
+
+.featureSec .swiper-slide {
+    min-height: 380px;
+    /* background-color: #f3f3f3; */
+    /* border: 1px solid #afafaf; */
+}
+
+.navigators {
+    background-color: transparent;
+    color: hsl(var(--card-foreground));
+    border: 1px solid #afafaf;
+    color: #535353;
+    padding: var(--size);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline-start: var(--size-xs);
+    outline-offset: 3px;
+    outline-color: hsl(var(--ring));
+    transition: all 0.3s ease-in;
+}
+
+.navigators:hover,
+.navigators:focus-visible {
+    background-color: hsl(var(--secondary) / 15%);
+    color: hsl(var(--secondary-foreground));
+    border-color: hsl(var(--border));
+}
+
+.navigators:active {
+    transform: scale(0.9);
+}
+
+.defaultCard {
+    background-color: hsla(var(--card));
+    color: hsl(var(--card-foreground));
+    border: 1px solid hsl(var(--border));
+}
+
+.feContainer {
+    border-radius: var(--size-m);
+    padding: var(--size-m);
+
+}
+
+.fImageContainer {
+    height: 300px;
+}
+
+.fImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.BottomFContainer {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.swiper-slide-active .BottomFContainer {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.5s ease 0.1s;
+}
+
+.mySwiper2,
+.mySwiper3 {
+    border: 1px solid hsl(var(--border));
+    background-color: hsla(var(--card));
+    border-radius: var(--size);
+    padding: var(--size-s);
+}
+
+.mySwiper2 .swiper-wrapper,
+.mySwiper3 .swiper-wrapper {
+    transition-timing-function: linear !important;
+    -webkit-transition-timing-function: linear !important;
+    -moz-transition-timing-function: linear !important;
+    -o-transition-timing-function: linear !important;
+}
+
+.BottomFContainer {}
+
+@media screen and (max-width:992px) {
+    .fImageContainer {
+        height: 240px;
+    }
 }
 
 @media screen and (max-width:575px) {
